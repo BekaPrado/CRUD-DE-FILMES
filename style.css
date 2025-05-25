@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 3rem;
+    background-image: url('./img/fundo.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    width: 500px;
+    height: 150px;
+    object-fit: contain;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding-bottom: 4vh;
+    margin-bottom: 2rem;
+}
+
+header img {
+    height: 5vh;
+}
+
+header input {
+    height: 5vh;
+    width: 40%;
+    padding-inline-start: 0.5rem;
+    border: 0.15rem solid rgb(162, 5, 5);
+    border-radius: 0.8rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+header button {
+    height: 5vh;
+    padding-inline: 1rem;
+    background-color: rgb(162, 5, 5);
+    color: white;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: rgb(130, 5, 5);
+}
+
+.container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-filme {
+    height: 350px;
+    width: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 8px solid rgb(162, 5, 5);
+    padding: 1rem;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card-filme:hover {
+    transform: scale(1.05);
+}
+
+.card-filme img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 2px solid #eee;
+}
+
+.card-filme h2 {
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+.card-filme .acoes {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+.card-filme .acoes button {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-filme .acoes .btn-editar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.card-filme .acoes .btn-editar:hover {
+    background-color: #45a049;
+}
+
+.card-filme .acoes .btn-excluir {
+    background-color: #f44336;
+    color: white;
+}
+
+.card-filme .acoes .btn-excluir:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos para o formulário de cadastro */
+.cadastro-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    z-index: 100;
+}
+
+.cadastro-container h2 {
+    color: rgb(162, 5, 5);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.cadastro-container input,
+.cadastro-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.cadastro-container textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.cadastro-container .botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cadastro-container button {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cadastro-container button[type="submit"] {
+    background-color: rgb(162, 5, 5);
+    color: white;
+}
+
+.cadastro-container button[type="submit"]:hover {
+    background-color: rgb(130, 5, 5);
+}
+
+.cadastro-container button[type="button"] {
+    background-color: #ddd;
+    color: #333;
+}
+
+.cadastro-container button[type="button"]:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/main.js" defer type="module"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>CRUD FILMES FRONT</title>
+</head>
+<body>
+  <img src="./img/fc7b0c9b-4283-4c4d-be23-7bdd492d5f08 1.png" alt="Titulo" class="titulo">
+
+  <header>
+    <img src="./img/play.png" alt="Play">
+    <input type="text" id="nome-filme" placeholder="Digite o nome do Filme">
+    <button id="novo-filme">Novo Filme</button>
+  </header>
+
+  <main>
+    <div class="container" id="container"></div>
+    
+    <div id="cadastro-filme" class="cadastro-container" style="display: none;">
+      <h2>Adicionar Novo Filme</h2>
+      <form id="form-filme">
+        <input type="text" id="filme-nome" placeholder="Nome do Filme" required>
+        <input type="text" id="filme-foto" placeholder="Nome do arquivo da capa (ex: duna.jpg)" required>
+        <input type="text" id="filme-duracao" placeholder="Duração (ex: 02:35)" required>
+        <input type="date" id="filme-data" required>
+        <input type="text" id="filme-trailer" placeholder="Link do trailer" required>
+        <textarea id="filme-sinopse" placeholder="Sinopse"></textarea>
+
+        <select id="filme-pais" required>
+          <option value="">Selecione o País</option>
+        </select>
+
+        <select id="filme-idioma" required>
+          <option value="">Selecione o Idioma</option>
+        </select>
+
+        <select id="filme-generos" required>
+          <option value="">Selecione o Genero</option>
+        </select>
+        
+        <div class="botoes">
+          <button type="submit">Salvar</button>
+          <button type="button" id="cancelar-cadastro">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
