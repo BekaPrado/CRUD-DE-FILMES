@@ -1,7 +1,12 @@
 'use strict'
 import {
-    getFilmes, postFilmes, putFilmes, deleteFilmes,
-    getPaises, getIdiomas, getGeneros
+    getFilmes, 
+    postFilmes, 
+    putFilmes, 
+    deleteFilmes,
+    getPaises, 
+    getIdiomas, 
+    getGeneros
 } from "./filmes.js"
 
 document.getElementById('container')
@@ -119,15 +124,17 @@ async function salvarFilme(evento) {
     }
 }
 
-inputPesquisa.addEventListener('keyup', async (evento) => {
-    if (evento.key === 'Enter') {
-        const resposta = await getFilmes()
-        const lista = resposta.filmes || resposta
-        const resultado = lista.filter(f => f.nome.toLowerCase().includes(evento.target.value.toLowerCase()))
-        container.replaceChildren()
-        resultado.forEach(criarCard)
-    }
+inputPesquisa.addEventListener('input', async (evento) => {
+    const termo = evento.target.value.toLowerCase()
+    const resposta = await getFilmes()
+    const lista = resposta.filmes || resposta
+    const resultado = lista.filter(filme =>
+        filme.nome.toLowerCase().includes(termo)
+    )
+    container.replaceChildren()
+    resultado.forEach(criarCard)
 })
+
 
 btnNovoFilme.addEventListener('click', mostrarFormulario)
 btnCancelar.addEventListener('click', esconderFormulario)
